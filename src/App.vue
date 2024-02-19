@@ -67,6 +67,7 @@ const smallScreen = useMatchMedia('(max-width: 1179px)');
 /* Consolidating styles between sizes here */
 header {
   background-color: rgb(245, 245, 245);
+  color: black;
 
   height: 11vh;
   width: 100vw;

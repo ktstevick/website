@@ -172,8 +172,8 @@ export default {
     }
 }
 
-/* Large tablets and all desktops (above 1024px) */
-@media only screen and (min-width: 1024px) {
+/* Large tablets and all desktops (above 1180px) */
+@media only screen and (min-width: 1180px) {
     .container {
         display: grid;
         grid-template-columns: 1fr 1fr;

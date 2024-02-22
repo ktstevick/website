@@ -4,7 +4,7 @@
 <template>
   <header>
     <div id="headerTop">
-      <h1 v-on:click="this.$router.push({ name: 'home' })">KT Stevick</h1>
+      <RouterLink id="headerTitle" to="/">KT Stevick</RouterLink> <!-- Originally a v-on:click on an h2, switched to RouterLink after going live -->
       <h2 v-if="!smallScreen">artist</h2>
     </div>
 
@@ -23,9 +23,9 @@
 
       <div v-if="!smallScreen">
         <a class="linkImage" href="https://www.instagram.com/ktstevick/">
-          <img class="linkImage" src="../src/assets/icons/instaicon.png" alt="insta" />
+          <img src="../src/assets/icons/instaicon.png" alt="insta" />
         </a>
-        <a class="linkImage" href="https://github.com/ktstevick/ktstevick">
+        <a class="linkImage" href="https://github.com/ktstevick">
           <img src="../src/assets/icons/githubicon.png" alt="gitHub" />
         </a>
         <a class="linkImage" href="https://www.linkedin.com/in/ktstevick/">
@@ -41,9 +41,9 @@
 
   <div id="footer" v-if="smallScreen">
     <a class="linkImage" href="https://www.instagram.com/ktstevick/">
-      <img class="linkImage" src="../src/assets/icons/instaicon.png" alt="insta" />
+      <img src="../src/assets/icons/instaicon.png" alt="insta" />
     </a>
-    <a class="linkImage" href="https://github.com/ktstevick/ktstevick">
+    <a class="linkImage" href="https://github.com/ktstevick">
       <img src="../src/assets/icons/githubicon.png" alt="gitHub" />
     </a>
     <a class="linkImage" href="https://www.linkedin.com/in/ktstevick/">
@@ -87,7 +87,8 @@ header {
   display: flex;
 }
 
-#headerTop h1 {
+#headerTitle {
+  color: black;
   margin: 0 0 1vh 5vw;
 
   font-size: 2.5em;
@@ -184,11 +185,10 @@ nav {
 @media only screen and (min-width: 1180px) {
   header {
     width: 24vw;
+    height: 100vh;
+
     margin: 0 .5vw;
-
     border-bottom: 0px;
-
-    top: 45%;
 
     display: block;
   }
@@ -197,19 +197,20 @@ nav {
     max-width: 325px;
 
     margin: 0 auto;
+    padding-top: 46vh; /* Eyeballed */
     border-bottom: 2px solid black;
 
     display: flex;
   }
 
-  #headerTop h1 {
+  #headerTitle {
     margin: 0 auto 0 0;
 
     font-size: 2.5em;
     transition: 0.4s;
   }
 
-  #headerTop h1:hover {
+  #headerTitle:hover {
     cursor: pointer;
     color: rgb(94, 49, 255);
   }

@@ -157,7 +157,7 @@ export default {
       this.$router.push({ name: 'software' });
     },
     toGitHub() {
-      window.location.href = 'https://github.com/ktstevick/ktstevick';
+      window.location.href = 'https://github.com/ktstevick';
     },
     toBirdGitHub() {
       window.location.href = 'https://github.com/birdmandeveloper';
